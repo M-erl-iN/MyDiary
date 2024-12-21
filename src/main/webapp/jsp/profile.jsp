@@ -12,7 +12,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="<%=context%>/css/diary15.css">
+    <link rel="stylesheet" type="text/css" href="<%=context%>/css/diary16.css">
 </head>
 <body>
 <%@ include file="components/header.jsp" %>
@@ -90,7 +90,7 @@
     </main>
 </div>
 
-<footer>Footer</footer>
+<%@ include file="components/footer.jsp" %>
 
 <div class="hidded dialogs">
     <dialog id="overlayMenu">

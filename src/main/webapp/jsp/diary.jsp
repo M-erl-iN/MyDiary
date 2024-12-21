@@ -5,7 +5,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary15.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary16.css">
 </head>
 
 <%
@@ -111,7 +111,7 @@
     </main>
 </div>
 
-<footer>Footer</footer>
+<%@ include file="components/footer.jsp" %>
 
 <div class="hidded dialogs">
     <dialog id="overlayMenu">
@@ -120,7 +120,7 @@
             <h1 class="beautiful-main-message">Новая страница</h1>
 
             <label for="title">Заголовок:</label><br/>
-            <input id="title" name="title" type="text" placeholder="название..." value="Тетрадь" required><br/>
+            <input id="title" name="title" type="text" placeholder="название..." value="Страница" required><br/>
 
             <button type="button" class="button form-button" onclick="overlayMenu.close()">
                 Назад

@@ -15,7 +15,7 @@ public interface RoleInteractionRepository {
     boolean deleteById(Long id);
 
     HashMap<User, Role> getUsersIdAndRolesIdByNotebookId(Long id); //userid roleid
-    Optional<Role> getRoleByUserIdAndNoteBookId(Long userId, Long notebookId);
+    Long getRoleByUserIdAndNoteBookId(Long userId, Long notebookId);
 
     List<Long> getUsersIdByNotebookId(Long notebookId);
     boolean deleteByUserIdAndNotebookId(Long userId, Long notebookId);

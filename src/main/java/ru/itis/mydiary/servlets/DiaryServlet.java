@@ -82,7 +82,7 @@ public class DiaryServlet extends HttpServlet {
         req.setAttribute("title", notebookOptional.get().getTitle());
         req.setAttribute("user", user);
         req.setAttribute("notes", notes);
-        req.setAttribute("flag", notebookOptional.get().getCreatorId() == user.getId());
+        req.setAttribute("flag", roleInteractionRepository.getRoleByUserIdAndNoteBookId(user.getId(), notebookId) != 3);
         req.getRequestDispatcher("/jsp/diary.jsp").forward(req, resp);
     }
 }

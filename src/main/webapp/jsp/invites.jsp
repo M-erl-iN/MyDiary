@@ -7,7 +7,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary15.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary16.css">
 
 </head>
 
@@ -41,7 +41,8 @@
         </h1>
 
         <div class="invites-main-container ">
-            <div class="invites-box-container"><h1>Меня пригласили: </h1>
+            <div class="invites-box-container">
+                <h1 class="beautiful-invite-message">Меня пригласили: </h1>
                 <div class="invites-container">
                     <%
                         List<InvitePost> invites = (List<InvitePost>) request.getAttribute("myInvites");
@@ -63,7 +64,7 @@
             </div>
 
             <div class="invites-box-container">
-                <h1>Я пригласил: </h1>
+                <h1 class="beautiful-invite-message">Я пригласил: </h1>
                 <div class="invites-container">
                     <%
                         invites = (List<InvitePost>) request.getAttribute("mySends");
@@ -88,15 +89,15 @@
                 Long start = (Long) request.getAttribute("start");
                 int step = (int) request.getAttribute("step");
             %>
-            <a class="green-elem" href="${pageContext.request.contextPath}/invites?start=<%=start-step%>&step=<%=step%>">-
+            <a class="next-prev-button button" href="${pageContext.request.contextPath}/invites?start=<%=start-step%>&step=<%=step%>">-
                 Назад</a>
-            <a class="green-elem" href="${pageContext.request.contextPath}/invites?start=<%=start+step%>&step=<%=step%>">Вперед
+            <a class="next-prev-button button" href="${pageContext.request.contextPath}/invites?start=<%=start+step%>&step=<%=step%>">Вперед
                 -</a>
         </div>
     </main>
 </div>
 
-<footer>Footer</footer>
+<%@ include file="components/footer.jsp" %>
 
 
 <div class="hidded dialogs">

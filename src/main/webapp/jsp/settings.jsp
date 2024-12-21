@@ -3,19 +3,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary15.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary16.css">
     <title>Settings</title>
 </head>
 <%
     User user = (User) request.getAttribute("user");
 %>
+
+<%@ include file="components/header.jsp" %>
+
 <body>
 <div class="content">
     <main>
-        <form action="${pageContext.request.contextPath}/downloadImage" method="post" enctype="multipart/form-data">
-            <img src="${pageContext.request.contextPath}/images?imId=<%=user.getImageId()%>">
-            <label for="file">фото</label><br/>
-            <input id="file" name="file" type="file" placeholder="photo..." accept="image/jpeg"><br/>
+        <form action="${pageContext.request.contextPath}/downloadImage" method="post" enctype="multipart/form-data" class="setting-image-form">
+            <label for="file">
+                <img class="profile-image" src="${pageContext.request.contextPath}/images?imId=<%=user.getImageId()%>">
+            </label>
+            <input id="file" name="file" type="file" accept="image/jpeg" style="display: none"><br/>
             <input type="submit" value="Сохранить" class="form-button">
         </form>
 
@@ -40,7 +44,7 @@
     </main>
 </div>
 
-<footer>Footer</footer>
+<%@ include file="components/footer.jsp" %>
 
 </body>
 </html>

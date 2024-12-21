@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Ooops! Error</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary15.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary16.css">
 
 </head>
 

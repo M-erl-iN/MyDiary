@@ -105,16 +105,15 @@ public class RoleInteractionRepositoryImpl implements RoleInteractionRepository 
     }
 
     @Override
-    public Optional<Role> getRoleByUserIdAndNoteBookId(Long userId, Long notebookId) {
+    public Long getRoleByUserIdAndNoteBookId(Long userId, Long notebookId) {
         try {
-            return Optional.ofNullable(
-                    jdbcTemplate.queryForObject(
+            return jdbcTemplate.queryForObject(
                             SQL_GET_ROLE_BY_USER_ID_AND_NOTEBOOK_ID,
-                            roleRowMapper,
+                            Long.class,
                             userId,
-                            notebookId));
+                            notebookId);
         } catch (EmptyResultDataAccessException e) {
-            return Optional.empty();
+            return 4l;
         }
     }
 

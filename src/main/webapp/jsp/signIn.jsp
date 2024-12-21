@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary15.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/diary16.css">
     <title>Войти</title>
 </head>
 

@@ -52,6 +52,10 @@ public class AddUserToNotebookServlet extends HttpServlet {
         String cookieToken = (String) session.getAttribute("cookie_token");
 
         Optional<User> userOptional = userRepository.findByCookieToken(cookieToken);
+        if (userOptional.isEmpty()) {
+            resp.sendRedirect(req.getContextPath() + "/profile");
+            return;
+        }
 
         Long userSendId = userOptional.get().getId();
         Long role = Long.valueOf(req.getParameter("role"));

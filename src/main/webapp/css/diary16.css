@@ -133,7 +133,7 @@ footer {
 }
 
 .content {
-    background-color: var(--background-color);
+    background-color: var(--dodger-blue-150);
     margin-top: var(--header-height);
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     display: grid;
@@ -442,12 +442,22 @@ form input[type=checkbox] {
 }
 
 .invite {
-    background-color: var(--light-blue-color);
-    padding: 1rem;
-    border-radius: 1rem;
+    background-color: var(--dodger-blue-100);
+    padding: .5rem;
+    border-radius: .75rem;
     width: max-content;
     height: max-content;
-    margin: 1rem 0.5rem;
+    color: var(--dodger-blue-600);
+}
+
+.invite h6 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.invite a {
+    text-decoration: underline;
+    color: var(--dodger-blue-700);
 }
 
 .invites-container {
@@ -458,19 +468,16 @@ form input[type=checkbox] {
     justify-content: space-evenly;
 }
 
-.invite h6 {
-    margin: 0;
-}
-
 .invites-main-container {
     display: flex;
     gap: 1rem;
 }
 
 .invites-box-container {
-    border: 1px solid lightgrey;
+    border: none;
     border-radius: 1rem;
-    background-color: var(--background-color);
+    background-color: var(--dodger-blue-50);
+    padding: .5rem 1rem;
 }
 
 
@@ -559,6 +566,56 @@ form input[type=submit] {
     letter-spacing: .17rem;
 }
 
+.description {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    font-size: small;
+    gap: 3rem;
+    color: var(--dodger-blue-400);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.description-elem {
+
+}
+
+.profile-image {
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid var(--dodger-blue-700);
+    border-radius: 50rem;
+}
+
+.setting-image-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.maintext {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.maintext a svg {
+    height: 100%;
+    fill: var(--dodger-blue-800);
+}
+
+.beautiful-invite-message {
+    font-size: xx-large;
+    font-weight: 400;
+    color: var(--dodger-blue-800);
+}
+
 @media (max-width: 480px) {
     .content {
         grid-template-columns: auto;
@@ -574,7 +631,7 @@ form input[type=submit] {
         box-shadow: none;
         border: none;
         padding: 0 2rem 2rem 2rem;
-        background-color: var(--background-color);
+        background-color: var(--dodger-blue-150);
     }
 
     .sidebar-left {
