@@ -54,6 +54,7 @@ public class InvitesServlet extends HttpServlet {
             resp.sendRedirect(req.getContextPath() + "/invites");
             return;
         }
+
         HttpSession session = req.getSession();
         String cookieToken = (String) session.getAttribute("cookie_token");
         Optional<User> user = userRepository.findByCookieToken(cookieToken);
